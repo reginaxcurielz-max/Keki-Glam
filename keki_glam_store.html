@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keki Glam | Luxury Makeup & Beauty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --keki-pink: #ff85a1;
+            --keki-dark: #1a1a1a;
+            --keki-gold: #d4af37;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--keki-pink);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .cat-logo {
+            transition: transform 0.3s ease;
+        }
+        .group:hover .cat-logo {
+            transform: rotate(-10deg) scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Promo Bar -->
+    <div class="bg-black text-white text-[10px] sm:text-xs py-2 text-center tracking-widest font-light uppercase">
+        Envíos gratis en compras superiores a $999 | 3 Cuotas sin interés
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- LOGO CON GATITO -->
+                <div class="flex-shrink-0 flex items-center group cursor-pointer">
+                    <div class="relative mr-2 cat-logo">
+                        <i class="fa-solid fa-cat text-3xl text-pink-500"></i>
+                        <div class="absolute -top-1 -right-1 w-2 h-2 bg-pink-300 rounded-full animate-ping"></div>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tighter text-black brand-font italic">KEKI <span class="text-pink-500">GLAM</span></span>
+                </div>
+
+                <nav class="hidden lg:flex space-x-10">
+                    <a href="#inicio" class="nav-link text-sm font-medium tracking-wide text-gray-700 hover:text-pink-500">INICIO</a>
+                    <a href="#alta-gama" class="nav-link text-sm font-medium tracking-wide text-gray-700 hover:text-pink-500">ALTA GAMA</a>
+                    <a href="#productos" class="nav-link text-sm font-medium tracking-wide text-gray-700 hover:text-pink-500">CATÁLOGO</a>
+                    <a href="#contacto" class="nav-link text-sm font-medium tracking-wide text-gray-700 hover:text-pink-500">CONTACTO</a>
+                </nav>
+
+                <div class="flex items-center space-x-6 text-gray-700">
+                    <button class="hover:text-pink-500 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="hover:text-pink-500 transition relative">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center font-bold shadow-sm">2</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative overflow-hidden bg-[#fff5f7] py-12 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                        <i class="fa-solid fa-paw text-pink-400"></i>
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Belleza con propósito</span>
+                    </div>
+                    <h1 class="text-6xl lg:text-8xl font-bold text-gray-900 leading-none">Tu Estilo, <br><span class="italic text-pink-500">Tu Glamour</span></h1>
+                    <p class="text-gray-500 text-lg max-w-md mx-auto lg:mx-0">En Keki Glam seleccionamos lo mejor del maquillaje de alta gama para que brilles con luz propia. Calidad premium garantizada.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#alta-gama" class="bg-black text-white px-10 py-4 rounded-full hover:bg-pink-600 transition duration-300 shadow-xl flex items-center justify-center">
+                            Ver Colección Lujo <i class="fa-solid fa-crown ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -z-10 w-full h-full bg-pink-200 rounded-full blur-[120px] opacity-30"></div>
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800" class="rounded-[2rem] shadow-2xl w-full object-cover aspect-square transform rotate-2 hover:rotate-0 transition duration-500" alt="Maquillaje Keki Glam">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas Destacadas -->
+    <section class="py-12 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                <span class="text-xl md:text-2xl font-serif font-bold tracking-[0.2em]">CHANEL</span>
+                <span class="text-xl md:text-2xl font-serif font-bold tracking-[0.2em]">DIOR</span>
+                <span class="text-xl md:text-2xl font-serif font-bold tracking-[0.2em]">FENTY</span>
+                <span class="text-xl md:text-2xl font-serif font-bold tracking-[0.2em]">NARS</span>
+                <span class="text-xl md:text-2xl font-serif font-bold tracking-[0.2em]">MAC</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ALTA GAMA -->
+    <section id="alta-gama" class="py-24 bg-[#121212] text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="space-y-4">
+                    <h2 class="text-pink-500 font-bold tracking-widest uppercase text-sm">Exclusividad Premium</h2>
+                    <h3 class="text-5xl font-bold brand-font italic">Luxury Collection</h3>
+                </div>
+                <div class="hidden md:block h-px bg-stone-700 flex-grow mx-10 mb-4"></div>
+                <a href="#" class="text-stone-400 hover:text-white transition uppercase text-xs tracking-widest font-bold">Ver catálogo de lujo</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Producto Lujo 1: DIOR -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl aspect-[4/5] mb-6 bg-stone-900">
+                        <img src="https://lh3.googleusercontent.com/d/11fXHtm1FsvXaeqwU_mJs_M5ttrCrvgF0" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Dior Backstage Foundation" onerror="this.src='https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?auto=format&fit=crop&q=80&w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <button class="bg-white text-black w-full py-3 rounded-full font-bold uppercase text-xs tracking-widest">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <p class="text-pink-500 text-xs font-bold tracking-widest mb-1">DIOR</p>
+                    <h4 class="text-xl brand-font italic mb-2">Backstage Face & Body Foundation</h4>
+                    <p class="text-stone-400 font-light">$1,250.00</p>
+                </div>
+
+                <!-- Producto Lujo 2: CHANEL -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl aspect-[4/5] mb-6 bg-stone-900">
+                        <img src="https://lh3.googleusercontent.com/d/1gd3q8JBR-WnmcMBLqnF_YUpPzNgYFVoN" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Chanel Rouge Allure" onerror="this.src='https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <button class="bg-white text-black w-full py-3 rounded-full font-bold uppercase text-xs tracking-widest">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <p class="text-pink-500 text-xs font-bold tracking-widest mb-1">CHANEL</p>
+                    <h4 class="text-xl brand-font italic mb-2">Rouge Allure Velvet Lipstick</h4>
+                    <p class="text-stone-400 font-light">$980.00</p>
+                </div>
+
+                <!-- Producto Lujo 3: CHARLOTTE TILBURY -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl aspect-[4/5] mb-6 bg-stone-900">
+                        <img src="https://lh3.googleusercontent.com/d/1Avq0LRK4KaHk7IkKcNreacSshYjsuEk7" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Charlotte Tilbury Palette" onerror="this.src='https://images.unsplash.com/photo-1617224908562-6320076a592c?auto=format&fit=crop&q=80&w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <button class="bg-white text-black w-full py-3 rounded-full font-bold uppercase text-xs tracking-widest">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <p class="text-pink-500 text-xs font-bold tracking-widest mb-1">CHARLOTTE TILBURY</p>
+                    <h4 class="text-xl brand-font italic mb-2">Pillow Talk Eyeshadow Palette</h4>
+                    <p class="text-stone-400 font-light">$1,450.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo General -->
+    <section id="productos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                    <div class="h-px w-12 bg-pink-200"></div>
+                    <i class="fa-solid fa-cat text-pink-500 text-2xl"></i>
+                    <div class="h-px w-12 bg-pink-200"></div>
+                </div>
+                <h2 class="text-4xl font-bold brand-font italic mb-4">Favoritos de Keki Glam</h2>
+                <p class="text-gray-400">Calidad excepcional para cada día.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                <!-- Producto 1: Lip Glow Oil Crystal (Drive Actualizado) -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-sm bg-gray-50">
+                        <img src="https://lh3.googleusercontent.com/d/1qwzNp1H7WNzM-551B6P41PA3AeuQzv_s" class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" alt="Lip Glow Oil Crystal" onerror="this.src='https://images.unsplash.com/photo-1586495764447-aa5733fbfdf0?auto=format&fit=crop&q=80&w=500'">
+                        <div class="absolute top-4 right-4 flex flex-col space-y-2 translate-x-12 group-hover:translate-x-0 transition duration-300">
+                            <button class="bg-white p-3 rounded-full shadow-lg hover:text-pink-500"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="font-bold text-gray-800 mb-1">Lip Glow Oil Crystal</h4>
+                        <p class="text-pink-500 font-bold">$380.00</p>
+                        <button class="mt-4 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-pink-500 transition-all pb-1">Ver Detalle</button>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Liquid Blush Sweet Cat (Drive Actualizado) -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-sm bg-gray-50">
+                        <img src="https://lh3.googleusercontent.com/d/1uoXf7hY4qOp6DG70h9a_BA7pppfu8aJA" class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" alt="Liquid Blush Sweet Cat" onerror="this.src='https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=500'">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="font-bold text-gray-800 mb-1">Liquid Blush "Sweet Cat"</h4>
+                        <p class="text-pink-500 font-bold">$420.00</p>
+                        <button class="mt-4 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-pink-500 transition-all pb-1">Ver Detalle</button>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Diamond Glow Highlighter (Drive Actualizado) -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-sm bg-gray-50">
+                        <img src="https://lh3.googleusercontent.com/d/1RSblIpFx32cjjr4agx6zl3GezRwteRs7" class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" alt="Diamond Glow Highlighter" onerror="this.src='https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?auto=format&fit=crop&q=80&w=500'">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="font-bold text-gray-800 mb-1">Diamond Glow Highlighter</h4>
+                        <p class="text-pink-500 font-bold">$550.00</p>
+                        <button class="mt-4 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-pink-500 transition-all pb-1">Ver Detalle</button>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Volumizing Cat Eye Mascara (Drive Actualizado) -->
+                <div class="product-card group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-sm bg-gray-50">
+                        <img src="https://lh3.googleusercontent.com/d/1UgGqMBrSUgrd4Gcun8ChRtPo5zdGLgEm" class="w-full aspect-[4/5] object-cover transition duration-500 group-hover:scale-105" alt="Volumizing Cat Eye Mascara" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=500'">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h4 class="font-bold text-gray-800 mb-1">Volumizing Cat Eye Mascara</h4>
+                        <p class="text-pink-500 font-bold">$310.00</p>
+                        <button class="mt-4 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-pink-500 transition-all pb-1">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-[#fcfcfc] pt-20 pb-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center group mb-6">
+                        <i class="fa-solid fa-cat text-3xl text-pink-500 mr-2"></i>
+                        <span class="text-3xl font-bold tracking-tighter text-black brand-font italic">KEKI <span class="text-pink-500">GLAM</span></span>
+                    </div>
+                    <p class="text-gray-500 max-w-sm mb-6 leading-relaxed text-sm">Tu destino favorito para descubrir la magia del maquillaje. Somos distribuidores autorizados de marcas internacionales y creadores de confianza.</p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="bg-white shadow-sm p-3 rounded-full hover:bg-pink-500 hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="bg-white shadow-sm p-3 rounded-full hover:bg-pink-500 hover:text-white transition-all"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="bg-white shadow-sm p-3 rounded-full hover:bg-pink-500 hover:text-white transition-all"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest mb-6 border-b border-pink-100 pb-2 inline-block">Categorías</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-pink-500 transition">Rostro & Base</a></li>
+                        <li><a href="#" class="hover:text-pink-500 transition">Ojos de Impacto</a></li>
+                        <li><a href="#" class="hover:text-pink-500 transition">Labios Velvet</a></li>
+                        <li><a href="#" class="hover:text-pink-500 transition">Skin Care Routine</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest mb-6 border-b border-pink-100 pb-2 inline-block">Atención</h5>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-pink-500 transition">Guía de Envíos</a></li>
+                        <li><a href="#" class="hover:text-pink-500 transition">Política de Cambios</a></li>
+                        <li><a href="#" class="hover:text-pink-500 transition">Preguntas Frecuentes</a></li>
+                        <li class="font-bold text-black mt-4">Soporte: info@kekiglam.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-[10px] text-gray-400 uppercase tracking-widest border-t border-gray-100 pt-8">
+                <p>&copy; 2024 KEKI GLAM - Hecho con <i class="fa-solid fa-heart text-pink-400 mx-1"></i> para amantes del maquillaje</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="#" class="fixed bottom-8 right-8 bg-black text-white p-5 rounded-full shadow-2xl hover:bg-pink-500 transition-all transform hover:rotate-12 z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
